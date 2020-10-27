@@ -1,9 +1,10 @@
 <div [class.isPrinting]="printService.isPrinting">
   <div style="text-align:center">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-    <button (click)="onPrintInvoice()">PRINT INVOICE</button>
+    <div>
+      <a routerLink="/home">Home</a> |
+      <a routerLink="/other">Other</a>
+    </div>
   </div>
   <router-outlet></router-outlet>
 </div>
+

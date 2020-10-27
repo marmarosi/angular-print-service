@@ -8,6 +8,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
 import {PrintService} from './print.service';
 import { HomePage } from './home/home.page';
 import { OtherPage } from './other/other.page';
+import { PageLayoutComponent } from './page-layout/page-layout.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { OtherPage } from './other/other.page';
     PrintLayoutComponent,
     InvoiceComponent,
     HomePage,
-    OtherPage
+    OtherPage,
+    PageLayoutComponent
   ],
   imports: [
     BrowserModule,
