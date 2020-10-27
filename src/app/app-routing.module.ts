@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { PrintLayoutComponent } from './print-layout/print-layout.component';
 import { HomePage } from './home/home.page';
+import { OtherPage } from './other/other.page';
 
 const routes: Routes = [
   {
@@ -12,6 +13,9 @@ const routes: Routes = [
   }, {
     path: 'home',
     component: HomePage
+  }, {
+    path: 'other',
+    component: OtherPage
   }, {
     path: 'print',
     outlet: 'print',
