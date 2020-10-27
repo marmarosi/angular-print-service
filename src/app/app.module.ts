@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PrintLayoutComponent } from './print-layout/print-layout.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import {PrintService} from './print.service';
+import { HomePage } from './home/home.page';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrintLayoutComponent,
-    InvoiceComponent
+    InvoiceComponent,
+    HomePage
   ],
   imports: [
     BrowserModule,

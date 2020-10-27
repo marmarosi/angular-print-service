@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {PrintService} from './print.service';
+// import {PrintService} from './print.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +7,13 @@ import {PrintService} from './print.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-print-service';
-
-  constructor(public printService: PrintService) { }
-
-  onPrintInvoice() {
-    const invoiceIds = ['101', '102'];
-    this.printService
-      .printDocument('invoice', invoiceIds);
-  }
+  // title = 'angular-print-service';
+  //
+  // constructor(public printService: PrintService) { }
+  //
+  // onPrintInvoice() {
+  //   const invoiceIds = ['101', '102'];
+  //   this.printService
+  //     .printDocument('invoice', invoiceIds);
+  // }
 }
