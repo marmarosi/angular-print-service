@@ -1,0 +1,9 @@
+<div [class.isPrinting]="printService.isPrinting">
+  <div style="text-align:center">
+    <h1>
+      This is an Eagerly Loaded Module
+    </h1>
+    <button (click)="onPrintInvoice()">PRINT INVOICE</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>

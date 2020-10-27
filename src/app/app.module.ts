@@ -5,11 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrintLayoutComponent } from './print-layout/print-layout.component';
 import { InvoiceComponent } from './invoice/invoice.component';
-import {PrintService} from './print.service';
+import { PrintService } from './print.service';
 import { HomePage } from './home/home.page';
 import { OtherPage } from './other/other.page';
+import { EagerModule } from '../eager/eager.module';
 
-@NgModule({
+@NgModule( {
   declarations: [
     AppComponent,
     PrintLayoutComponent,
@@ -19,9 +20,11 @@ import { OtherPage } from './other/other.page';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EagerModule
   ],
   providers: [PrintService],
   bootstrap: [AppComponent]
-})
-export class AppModule { }
+} )
+export class AppModule {
+}

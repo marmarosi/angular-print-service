@@ -17,6 +17,9 @@ const routes: Routes = [
     path: 'other',
     component: OtherPage
   }, {
+    path: 'spring',
+    loadChildren: () => import('../eager/eager.module').then(m => m.EagerModule)
+  }, {
     path: 'print',
     outlet: 'print',
     component: PrintLayoutComponent,
