@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { EagerModule } from '../eager/eager.module';
 import { AppComponent } from './app.component';
-import { PrintLayoutComponent } from './print-layout/print-layout.component';
-import { InvoiceComponent } from './invoice/invoice.component';
-import { PrintService } from './print.service';
+
 import { HomePage } from './home/home.page';
 import { OtherPage } from './other/other.page';
-import { EagerModule } from '../eager/eager.module';
+
+import { PrintLayoutComponent } from './print-layout/print-layout.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { WaybillComponent } from './waybill/waybill.component';
+
+import { PrintService } from './print.service';
 
 @NgModule( {
   declarations: [
@@ -16,7 +20,8 @@ import { EagerModule } from '../eager/eager.module';
     PrintLayoutComponent,
     InvoiceComponent,
     HomePage,
-    OtherPage
+    OtherPage,
+    WaybillComponent
   ],
   imports: [
     BrowserModule,

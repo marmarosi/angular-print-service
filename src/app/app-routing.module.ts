@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InvoiceComponent } from './invoice/invoice.component';
-import { PrintLayoutComponent } from './print-layout/print-layout.component';
+
 import { HomePage } from './home/home.page';
 import { OtherPage } from './other/other.page';
+
+import { PrintLayoutComponent } from './print-layout/print-layout.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { WaybillComponent } from './waybill/waybill.component';
 
 const routes: Routes = [
   {
@@ -27,7 +30,8 @@ const routes: Routes = [
     outlet: 'print',
     component: PrintLayoutComponent,
     children: [
-      { path: 'invoice/:invoiceIds', component: InvoiceComponent }
+      { path: 'invoice/:invoiceIds', component: InvoiceComponent },
+      { path: 'waybill/:waybillIds', component: WaybillComponent }
     ]
   }
 ];

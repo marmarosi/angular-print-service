@@ -1,4 +1,8 @@
-button {
+.invoice {
   background: aqua;
+  font-size: 24px;
+}
+.waybill {
+  background: gold;
   font-size: 24px;
 }

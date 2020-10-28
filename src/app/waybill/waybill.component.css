@@ -1,0 +1,7 @@
+.waybill {
+  page-break-after: always;
+}
+
+.waybill:last-child {
+  page-break-after: avoid;
+}

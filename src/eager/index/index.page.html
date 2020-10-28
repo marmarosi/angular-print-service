@@ -3,7 +3,12 @@
     <h1>
       This is an Eager Loaded Module
     </h1>
-    <button (click)="onPrintInvoice()">PRINT INVOICE</button>
+    <p>
+      <button (click)="onPrintInvoice()" class="invoice">PRINT INVOICE</button>
+    </p>
+    <p>
+      <button (click)="onPrintWaybill()" class="waybill">PRINT WAYBILL</button>
+    </p>
   </div>
   <router-outlet></router-outlet>
 </div>

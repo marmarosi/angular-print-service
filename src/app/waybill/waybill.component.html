@@ -1,0 +1,4 @@
+<div class="waybill" *ngFor="let waybill of waybillIds; let i = index">
+  <h1>Waybill<br>{{ waybill }}</h1>
+  Amount: {{ (waybillDetails[i] | async)?.amount }}
+</div>
