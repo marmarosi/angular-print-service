@@ -3,32 +3,32 @@ import { ActivatedRoute } from '@angular/router';
 import { PrintService } from '../../app/print.service';
 
 @Component({
-  templateUrl: './customer-order.component.html',
-  styleUrls: ['./customer-order.component.css'],
+  templateUrl: './purchase-order.component.html',
+  styleUrls: ['./purchase-order.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CustomerOrderComponent implements OnInit {
+export class PurchaseOrderComponent implements OnInit {
 
-  coIds: string[];
-  coDetails: Promise<any>[];
+  poIds: string[];
+  poDetails: Promise<any>[];
 
   constructor(
     private route: ActivatedRoute,
     private printService: PrintService
   ) {
-    this.coIds = route.snapshot.params[ 'coIds' ]
+    this.poIds = route.snapshot.params[ 'poIds' ]
       .split( ',' );
   }
 
   ngOnInit() {
-    this.coDetails = this.coIds
-      .map( id => this.getCODetails( id ) );
-    Promise.all( this.coDetails )
-      .then( () => this.printService.onDataReady() );
+    this.poDetails = this.poIds
+      .map( id => this.getPODetails( id ) );
+    Promise.all( this.poDetails )
+      .then( () => this.printService.onDataReady( 'lazy' ) );
   }
 
-  getCODetails(
-    coId
+  getPODetails(
+    poId
   ): Promise<any> {
     const amount = Math.floor( (Math.random() * 100) );
     return new Promise( resolve =>

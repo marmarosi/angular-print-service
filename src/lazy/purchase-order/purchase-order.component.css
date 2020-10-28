@@ -1,7 +1,7 @@
-.co {
+.po {
   page-break-after: always;
 }
 
-.co:last-child {
+.po:last-child {
   page-break-after: avoid;
 }

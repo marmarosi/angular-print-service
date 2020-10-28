@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { LazyRoutingModule } from './lazy-routing.module';
 import { IndexPage } from './index/index.page';
+import { PurchaseOrderComponent } from './purchase-order/purchase-order.component';
 
 @NgModule( {
   declarations: [
-    IndexPage
+    IndexPage,
+    PurchaseOrderComponent
   ],
   imports: [
     CommonModule,

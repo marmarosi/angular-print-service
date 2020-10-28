@@ -1,17 +1,18 @@
-<div [class.isPrinting]="printService.isPrinting">
-  <div style="text-align:center">
-    <h1>
-      This is a Lazy Loaded Module
-    </h1>
-    <p>
-      <button (click)="onPrintInvoice()" class="invoice">PRINT INVOICE</button>
-    </p>
-    <p>
-      <button (click)="onPrintWaybill()" class="waybill">PRINT WAYBILL</button>
-    </p>
-    <p>
-      <button (click)="onPrintCO()" class="co">PRINT CO</button>
-    </p>
-  </div>
-  <router-outlet></router-outlet>
+<div style="text-align:center">
+  <h1>
+    This is a Lazy Loaded Module
+  </h1>
+  <p>
+    <button (click)="onPrintInvoice()" class="invoice">PRINT INVOICE</button>
+  </p>
+  <p>
+    <button (click)="onPrintWaybill()" class="waybill">PRINT WAYBILL</button>
+  </p>
+  <p>
+    <button (click)="onPrintCO()" class="co">PRINT CO</button>
+  </p>
+  <p>
+    <button (click)="onPrintPO()" class="po">PRINT PO</button>
+  </p>
 </div>
+<router-outlet></router-outlet>

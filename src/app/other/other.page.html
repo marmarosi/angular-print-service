@@ -1,14 +1,12 @@
-<div [class.isPrinting]="printService.isPrinting">
-  <div style="text-align:center">
-    <h1>
-      This is an Other Page
-    </h1>
-    <p>
-      <button (click)="onPrintInvoice()" class="invoice">PRINT INVOICE</button>
-    </p>
-    <p>
-      <button (click)="onPrintWaybill()" class="waybill">PRINT WAYBILL</button>
-    </p>
-  </div>
-  <router-outlet></router-outlet>
+<div style="text-align:center">
+  <h1>
+    This is an Other Page
+  </h1>
+  <p>
+    <button (click)="onPrintInvoice()" class="invoice">PRINT INVOICE</button>
+  </p>
+  <p>
+    <button (click)="onPrintWaybill()" class="waybill">PRINT WAYBILL</button>
+  </p>
 </div>
+<router-outlet></router-outlet>

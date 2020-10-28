@@ -14,25 +14,33 @@ export class PrintService {
 
   printDocument(
     documentName: string,
-    documentData: string[]
+    documentData: string[],
+    path = ''
   ): void {
     this.isPrinting = true;
-    this.router.navigate( ['/', {
+    this.router.navigate( [ `/${ path }`, {
       outlets: {
         print: [ 'print', documentName, documentData.join() ]
       }
-    }] );
+    } ] );
   }
 
-  onDataReady(): void {
+  onDataReady(
+    path = ''
+  ): void {
     setTimeout( () => {
       window.print();
       this.isPrinting = false;
-      this.router.navigate( [ {
+      const emptyOutlets = {
         outlets: {
           print: null
         }
-      } ] );
+      };
+      if (path) {
+        this.router.navigate( [ `/${ path }`, emptyOutlets ] );
+      } else {
+        this.router.navigate( [ emptyOutlets ] );
+      }
     } );
   }
 }

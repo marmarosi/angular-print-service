@@ -29,4 +29,10 @@ export class IndexPage {
     this.printService
       .printDocument( 'co', coIds );
   }
+
+  onPrintPO(): void {
+    const poIds = ['1', '2'];
+    this.printService
+      .printDocument( 'po', poIds, 'lazy' );
+  }
 }
