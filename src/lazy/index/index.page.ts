@@ -1,12 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { PrintService } from '../print.service';
+import { PrintService } from '../../app/print.service';
 
-@Component( {
-  templateUrl: './other.page.html',
-  styleUrls: ['./other.page.css'],
+@Component({
+  templateUrl: './index.page.html',
+  styleUrls: ['./index.page.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
-} )
-export class OtherPage {
+})
+export class IndexPage {
 
   constructor(
     public printService: PrintService
@@ -15,6 +15,6 @@ export class OtherPage {
   onPrintInvoice() {
     const invoiceIds = ['101', '102'];
     this.printService
-      .printDocument( 'invoice', invoiceIds );
+      .printDocument('invoice', invoiceIds);
   }
 }

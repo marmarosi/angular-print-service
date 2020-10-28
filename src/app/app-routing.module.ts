@@ -17,8 +17,11 @@ const routes: Routes = [
     path: 'other',
     component: OtherPage
   }, {
-    path: 'spring',
+    path: 'eager',
     loadChildren: () => import('../eager/eager.module').then(m => m.EagerModule)
+  }, {
+    path: 'lazy',
+    loadChildren: () => import('../lazy/lazy.module').then(m => m.LazyModule)
   }, {
     path: 'print',
     outlet: 'print',

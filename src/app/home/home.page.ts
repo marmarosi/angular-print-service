@@ -6,18 +6,16 @@ import { PrintService } from '../print.service';
   styleUrls: ['./home.page.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePage implements OnInit {
+export class HomePage {
   title = 'angular-print-service';
 
-  constructor(public printService: PrintService) { }
+  constructor(
+    public printService: PrintService
+  ) { }
 
   onPrintInvoice() {
     const invoiceIds = ['101', '102'];
     this.printService
       .printDocument('invoice', invoiceIds);
   }
-
-  ngOnInit(): void {
-  }
-
 }

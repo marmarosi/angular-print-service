@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { EagerRoutingModule } from './eager-routing.module';
+import { LazyRoutingModule } from './lazy-routing.module';
 import { IndexPage } from './index/index.page';
 
 
@@ -11,7 +11,7 @@ import { IndexPage } from './index/index.page';
   ],
   imports: [
     CommonModule,
-    EagerRoutingModule
+    LazyRoutingModule
   ]
 } )
-export class EagerModule { }
+export class LazyModule { }
