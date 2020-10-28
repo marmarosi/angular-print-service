@@ -1,32 +1,32 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PrintService } from '../print.service';
+import { PrintService } from '../../app/print.service';
 
-@Component( {
-  templateUrl: './waybill.component.html',
-  styleUrls: ['./waybill.component.css'],
+@Component({
+  templateUrl: './customer-order.component.html',
+  styleUrls: ['./customer-order.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
-} )
-export class WaybillComponent implements OnInit {
+})
+export class CustomerOrderComponent implements OnInit {
 
-  waybillIds: string[];
-  waybillDetails: Promise<any>[];
+  coIds: string[];
+  coDetails: Promise<any>[];
 
   constructor( route: ActivatedRoute,
                private printService: PrintService ) {
-    this.waybillIds = route.snapshot.params[ 'waybillIds' ]
+    this.coIds = route.snapshot.params[ 'coIds' ]
       .split( ',' );
   }
 
   ngOnInit() {
-    this.waybillDetails = this.waybillIds
-      .map( id => this.getWaybillDetails( id ) );
-    Promise.all( this.waybillDetails )
+    this.coDetails = this.coIds
+      .map( id => this.getCODetails( id ) );
+    Promise.all( this.coDetails )
       .then( () => this.printService.onDataReady() );
   }
 
-  getWaybillDetails(
-    waybillId
+  getCODetails(
+    coId
   ): Promise<any> {
     const amount = Math.floor( (Math.random() * 100) );
     return new Promise( resolve =>

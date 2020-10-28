@@ -23,4 +23,10 @@ export class IndexPage {
     this.printService
       .printDocument('waybill', waybillIds);
   }
+
+  onPrintCO(): void {
+    const coIds = ['1', '2'];
+    this.printService
+      .printDocument( 'co', coIds );
+  }
 }

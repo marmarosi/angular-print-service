@@ -1,0 +1,4 @@
+<div class="co" *ngFor="let co of coIds; let i = index">
+  <h1>Customer Order #{{ co }}</h1>
+  Amount: {{ (coDetails[i] | async)?.amount }}
+</div>

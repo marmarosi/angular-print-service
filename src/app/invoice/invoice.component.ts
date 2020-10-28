@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PrintService } from '../print.service';
 
 @Component( {
-  selector: 'app-invoice',
   templateUrl: './invoice.component.html',
-  styleUrls: ['./invoice.component.css']
+  styleUrls: ['./invoice.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 } )
 export class InvoiceComponent implements OnInit {
 
